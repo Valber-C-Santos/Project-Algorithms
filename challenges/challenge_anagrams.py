@@ -14,6 +14,7 @@ def merge(left, right):
     result.extend(right[right_index:])
     return result
 
+
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -27,11 +28,12 @@ def merge_sort(arr):
 
     return merge(left_half, right_half)
 
+
 def is_anagram(first_string, second_string):
     if first_string == "" and second_string == "":
         return "", "", False
     
-    word1_sorted = merge_sort(first_string.lower())
-    word2_sorted = merge_sort(second_string.lower())
+    word1= merge_sort(first_string.lower())
+    word2 = merge_sort(second_string.lower())
 
-    return "".join(word1_sorted), "".join(word2_sorted), word1_sorted == word2_sorted
+    return "".join(word1), "".join(word2), word1 == word2
