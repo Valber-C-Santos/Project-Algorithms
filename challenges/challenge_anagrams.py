@@ -33,7 +33,7 @@ def is_anagram(first_string, second_string):
     if first_string == "" and second_string == "":
         return "", "", False
     
-    word1= merge_sort(first_string.lower())
+    word1 = merge_sort(first_string.lower())
     word2 = merge_sort(second_string.lower())
 
     return "".join(word1), "".join(word2), word1 == word2
